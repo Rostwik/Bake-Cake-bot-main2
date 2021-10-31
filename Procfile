@@ -1,1 +1,1 @@
-web: gunicorn bakecakebot1/Bake_Cake_bot.wsgi --log-file -
+web: gunicorn Bake_Cake_bot/Bake_Cake_bot.wsgi --log-file -
