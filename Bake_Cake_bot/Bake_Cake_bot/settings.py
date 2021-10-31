@@ -22,6 +22,7 @@ secret_key = env.str('SECRET_KEY')
 allowed_hosts = env.list('ALLOWED_HOSTS')
 db_url = env.str('DATABASE_URL')
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -83,6 +84,8 @@ WSGI_APPLICATION = 'Bake_Cake_bot.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(db_url)
 }
+
+print(DATABASES)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

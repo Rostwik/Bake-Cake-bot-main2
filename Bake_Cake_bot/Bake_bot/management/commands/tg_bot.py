@@ -3,7 +3,6 @@
 from environs import Env
 
 from django.core.management.base import BaseCommand
-from django.db.models import F
 from Bake_bot.models import Customer, Product, Product_properties, Product_parameters, Order
 
 import logging
