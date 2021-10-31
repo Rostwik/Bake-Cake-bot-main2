@@ -20,7 +20,7 @@ env.read_env()
 
 secret_key = env.str('SECRET_KEY')
 allowed_hosts = env.list('ALLOWED_HOSTS')
-db_url = env.str('DB_URL')
+db_url = env.str('DATABASE_URL')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
