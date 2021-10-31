@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+import dj_database_url
 from environs import Env
 
 env = Env()
@@ -19,10 +20,10 @@ env.read_env()
 
 secret_key = env.str('SECRET_KEY')
 allowed_hosts = env.list('ALLOWED_HOSTS')
+db_url = env.str('DB_URL')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -31,7 +32,6 @@ SECRET_KEY = secret_key
 
 DEBUG = env.bool('DEBUG', True)
 ALLOWED_HOSTS = allowed_hosts
-
 
 # Application definition
 
@@ -76,15 +76,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Bake_Cake_bot.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(db_url)
 }
 
 # Password validation
@@ -105,7 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -116,8 +112,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_L10N = False
-
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
