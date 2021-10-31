@@ -6,5 +6,6 @@ environs==9.3.3
 jsonfield==3.1.0
 django-phonenumber-field==5.2.0
 phonenumbers==8.12.36
+dj-database-url==0.5.0
 
 
