@@ -1,2 +1,1 @@
-web: python Bake_Cake_bot/manage.py runserver 0.0.0.0:5000
 web: python Bake_Cake_bot/manage.py tg_bot
