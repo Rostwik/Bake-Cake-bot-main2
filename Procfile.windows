@@ -1,1 +1,0 @@
-web: python Bake_Cake_bot/manage.py tg_bot
