@@ -1,0 +1,1 @@
+web: gunicorn bakecakebot1.wsgi
