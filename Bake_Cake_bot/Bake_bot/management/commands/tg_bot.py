@@ -155,8 +155,14 @@ def add_pd(update, context):
             )
             return CONTACT
     elif answer == 'Отказаться':
+        with open("pd.pdf", 'rb') as file:
+            context.bot.send_document(chat_id=update.message.chat_id, document=file)
+        reply_keyboard = [['Принять', 'Отказаться']]
         update.message.reply_text(
-            f'Извините, без согласия на обработку данных заказы невозможны.',
+            text='Извините, без согласия на обработку данных заказы невозможны.',
+            reply_markup=ReplyKeyboardMarkup(
+                reply_keyboard, one_time_keyboard=True, resize_keyboard=True
+            ),
         )
         return PD
 
