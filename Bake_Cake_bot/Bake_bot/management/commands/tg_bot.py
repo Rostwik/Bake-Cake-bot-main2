@@ -338,7 +338,7 @@ def choose_option3(update: Update, context: CallbackContext):
             if parameter.parameter_name in exception_word:
                 parameters.remove(exception_word)
 
-    buttons_list = split(parameters, 3)
+    buttons_list = split(parameters, 2)
     buttons_list.append(exception_parameter)
     buttons_list.append(['ГЛАВНОЕ МЕНЮ'])
     option4_keyboard = buttons_list
