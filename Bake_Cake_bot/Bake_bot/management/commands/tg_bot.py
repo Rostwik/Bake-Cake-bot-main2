@@ -84,13 +84,7 @@ def start(update: Update, context: CallbackContext) -> int:
             text='Для заказа нужно ваше согласие на обработку персональных данных',
             reply_markup=ReplyKeyboardMarkup(
                 reply_keyboard, one_time_keyboard=True, resize_keyboard=True
-            ),
-        )
-        update.message.reply_text(
-            text='Для заказа нужно ваше согласие на обработку персональных данных',
-            reply_markup=ReplyKeyboardMarkup(
-                reply_keyboard, one_time_keyboard=True, resize_keyboard=True
-            ),
+            )
         )
         return PD
     if not is_contact:
