@@ -378,8 +378,8 @@ def choose_option5(update: Update, context: CallbackContext):
             reply_markup=ReplyKeyboardMarkup(main_keyboard, resize_keyboard=True, one_time_keyboard=True)
         )
         return MAIN
-    option6_keyboard = [['Без надписи'], ['ГЛАВНОЕ МЕНЮ']]
-    update.message.reply_text('Мы можем разместить на торте любую надпись, например: "С днем рождения!"\n'
+    option6_keyboard = [['Без надписи (+0)'], ['ГЛАВНОЕ МЕНЮ']]
+    update.message.reply_text('Мы можем разместить на торте любую надпись (+500), например: "С днем рождения!"\n'
                               'Введите текст надписи или нажмите "Без надписи"',
                               reply_markup=ReplyKeyboardMarkup(option6_keyboard, resize_keyboard=True,
                                                                one_time_keyboard=True))
