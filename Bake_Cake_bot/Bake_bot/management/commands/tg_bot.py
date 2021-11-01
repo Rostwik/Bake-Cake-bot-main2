@@ -268,7 +268,7 @@ def choose_option1(update: Update, context: CallbackContext):
     parameters = []
     for parameter in Product_parameters.objects.filter(product_property__property_name__contains='Форма'):
         parameters.append(f'{parameter.parameter_name} (+{parameter.parameter_price})')
-    buttons_list = split(parameters, 3)
+    buttons_list = split(parameters, 2)
     buttons_list.append(['ГЛАВНОЕ МЕНЮ'])
     option2_keyboard = buttons_list
     update.message.reply_text('Выберите форму',
